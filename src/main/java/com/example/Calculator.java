@@ -28,8 +28,12 @@ public class Calculator {
     
     /**
      * 除法运算
+     * @throws IllegalArgumentException 当除数为0时抛出异常
      */
     public int divide(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("被除数不能为0");
+        }
         return a / b;
     }
     
